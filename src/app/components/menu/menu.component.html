@@ -1,0 +1,44 @@
+<div class="menu-page">
+  <header class="menu-header">
+    <img src="assets/logo.svg" alt="Shireen Logo" class="logo" />
+    <div class="header-text">
+      <h1>Shireen Juice & Snacks</h1>
+      <p>Fresh Juices, Tasty Bites</p>
+    </div>
+  </header>
+
+  <nav class="category-tabs">
+    @for (category of categories; track category.title) {
+      <button
+        class="tab"
+        [class.active]="selectedCategory === category"
+        (click)="selectedCategory = category"
+      >
+        <span class="icon">{{ category.icon }}</span>
+        <span class="label">{{ category.title }}</span>
+      </button>
+    }
+  </nav>
+
+  <div class="menu-section">
+    @if (selectedCategory) {
+      <section class="menu-category">
+        <div class="items">
+          @for (item of selectedCategory.items; track item.name) {
+            <div class="menu-item">
+              <div class="item-info">
+                <h3>{{ item.name }}</h3>
+                <p>{{ item.description }}</p>
+              </div>
+              <span class="price">{{ item.price }}</span>
+            </div>
+          }
+        </div>
+      </section>
+    }
+
+    <footer>
+      <p>Thank you for visiting Shireen!</p>
+    </footer>
+  </div>
+</div>

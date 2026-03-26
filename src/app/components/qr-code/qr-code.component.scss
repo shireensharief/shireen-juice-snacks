@@ -90,6 +90,25 @@
     color: #bbb;
     word-break: break-all;
   }
+
+  .menu-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 32px;
+    background: linear-gradient(135deg, #ff6b35, #ff9a56);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+    transition: all 0.25s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(255, 107, 53, 0.4);
+    }
+  }
 }
 
 // Mobile responsive

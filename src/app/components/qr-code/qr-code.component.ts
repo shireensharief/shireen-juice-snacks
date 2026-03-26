@@ -1,9 +1,10 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import * as QRCode from 'qrcode';
 
 @Component({
   selector: 'app-qr-code',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './qr-code.component.html',
   styleUrl: './qr-code.component.scss',
 })
